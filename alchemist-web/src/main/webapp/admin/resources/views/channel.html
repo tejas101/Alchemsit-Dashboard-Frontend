@@ -1,0 +1,51 @@
+<h3>Channels</h3>
+<div ng-init="init()">
+	<!-- Search Form -->
+	<div class="panel panel-info ng-scope">
+		<div class="panel-heading"><b>Search</b></div>
+		<form role="form" name="frmSearch" novalidate="" class="ng-pristine ng-valid">
+			<div class="panel-body">
+				<div class="row">
+				<!-- 
+					<div class="col-md-6" ng-disabled = "">
+						<div class="form-group">
+							<select 
+								class="form-control" 
+								name="network" ng-model="searchChannel.network" 
+								ng-options="item as item.name for item in networks track by item.code">
+								<option value="">Select Network</option>
+							</select>
+			            </div>
+					</div>
+				 -->
+					<div class="col-md-4">
+						<div class="form-group">
+							<select 
+								class="form-control" 
+								name="channelStatus" ng-model="searchChannel.channelStatus" 
+								ng-options="item as item.name for item in channelStatuses track by item.code">
+								<option value="">Select Channel Status</option>
+							</select>
+			            </div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8">
+						<button type="submit" style="color:white" class="btn waves-effect waves-light blue" ng-click="search('')">Search</button>
+						<button type="button" style="color:white" class="btn waves-effect waves-light blue" ng-click="init()">Reset</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<!-- Ui Grid -->
+	<div ui-grid="gridOptions" ui-grid-pagination class="grid" ui-grid-auto-resize ui-grid-resize-columns ui-grid-selection></div>
+	<br />
+	
+	<!-- Update Status -->
+	<div style="float: right">
+		<button type="submit" style="color:white" class="btn waves-effect waves-light blue" ng-click="updateStatus()" ng-disabled="!checkUpdateStatusApplicable()">Update Status</button>
+ 	</div>
+</div>
+

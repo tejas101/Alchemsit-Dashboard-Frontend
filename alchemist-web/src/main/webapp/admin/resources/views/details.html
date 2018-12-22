@@ -1,0 +1,19 @@
+
+<h3>Details of Channel</h3>
+<div ng-init="init()">
+	
+	<!-- Ui Grid -->
+	<div ui-grid="gridOptions" ui-grid-selection class="grid" ui-grid-auto-resize ui-grid-resize-columns ui-grid-pagination  ng-style="getTableHeight()"></div>
+	<br />
+	
+	<div class="col-sm-13">
+		<div class="panel panel-info">
+			<div class="panel-heading"><b>Channel Stats</b></div>
+			<div class="panel-body">
+				<nvd3 options="options" data="data"></nvd3>
+			</div>
+		</div>
+	</div>
+</div>
+
+

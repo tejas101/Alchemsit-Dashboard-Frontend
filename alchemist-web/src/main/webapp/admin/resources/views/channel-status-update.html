@@ -1,0 +1,44 @@
+<!-- Update Status -->
+<div class="panel panel-info" ng-init="init()">
+	<div class="panel-heading">Update Status</div>
+	<form role="form" name="frmStatus" novalidate="" class="ng-pristine ng-valid">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<select  
+							class="form-control" 
+							name="channelStatus" ng-model="channelStatus" 
+							ng-options="item as item.name for item in channelStatuses track by item.code">
+						</select>
+		            </div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<select  
+							class="form-control" 
+							name="channelCategory" ng-model="channelCategory" 
+							ng-options="item as item.name for item in channelCategories track by item.code">
+						</select>
+		            </div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>No Adult Content &nbsp;<input type="checkbox" ng-model="termsChecked.noAdultContent"></label>
+						<label> &nbsp; &nbsp; &nbsp; &nbsp;Copyright Verified &nbsp;<input type="checkbox" ng-model="termsChecked.copyrightVerified"></label>
+					</div>
+				</div>
+			</div>
+			<div class="alert alert-danger" role="alert" ng-show="errors.length">
+				<span ng-repeat="error in errors">{{ error }}</span>
+			</div>
+			<div class="row">
+				<div class="col-md-8">
+					<button type="submit" class="btn btn-raised btn-info" ng-click="update()">Update</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

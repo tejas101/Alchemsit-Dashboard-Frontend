@@ -1,0 +1,7 @@
+/build/
+src/main/src
+src/main/frontend/.tmp
+src/main/frontend/bower_components
+src/main/frontend/node_modules
+src/main/frontend/node
+src/main/frontend/dist

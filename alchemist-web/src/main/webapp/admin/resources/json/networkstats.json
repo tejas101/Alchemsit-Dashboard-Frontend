@@ -1,0 +1,46 @@
+[  {
+    "views": 0,
+    "earnings": 0,
+    "estimatedMinutesWatched": 0,
+    "monetizedPlaybacks": 0,
+    "playbackBasedCpm": 0,
+    "grossRevenue": 0,
+    "date": 1456943400000
+  },
+  {
+    "views": 0,
+    "earnings": 0,
+    "estimatedMinutesWatched": 0,
+    "monetizedPlaybacks": 0,
+    "playbackBasedCpm": 0,
+    "grossRevenue": 0,
+    "date": 1457029800000
+  },
+  {
+    "views": 1642,
+    "earnings": 1.051,
+    "estimatedMinutesWatched": 3137,
+    "monetizedPlaybacks": 370,
+    "playbackBasedCpm": 5.159,
+    "grossRevenue": 1.909,
+    "date": 1457116200000
+  },
+  {
+    "views": 1642,
+    "earnings": 1.051,
+    "estimatedMinutesWatched": 3137,
+    "monetizedPlaybacks": 370,
+    "playbackBasedCpm": 5.159,
+    "grossRevenue": 1.909,
+    "date": 1457202600000
+  },
+  {
+    "views": 1642,
+    "earnings": 1.051,
+    "estimatedMinutesWatched": 3137,
+    "monetizedPlaybacks": 370,
+    "playbackBasedCpm": 5.159,
+    "grossRevenue": 1.909,
+    "date": 1457289000000
+  }
+]

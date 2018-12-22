@@ -1,0 +1,72 @@
+<!-- Stats -->
+<h3>Stats</h3>
+
+<form role="frmChannel" name="frmChannel" novalidate>
+	<div class="row" ng-init="init()">
+		
+		<div class="col-sm-6">
+			<div class="panel panel-info">
+				<div class="panel-heading"><b> Channel Stats </b></div>
+				<div class="panel-body">
+					<nvd3 options="options" data="data"></nvd3>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-sm-6">
+			<div class="panel panel-info">
+			<div class="panel-heading"><b> Search </b></div>
+				<div class="panel-body">
+					<!-- 
+					<div class="row">					
+						<div class="col-md-12">
+							<div class="form-group">
+								<select 
+									class="form-control" 
+									name="network" ng-model="searchChannel.networkCode" 
+									ng-options="item as item.name for item in networks track by item.code">
+									<option value="">Select Network..123</option>
+								</select>
+			            	</div>
+						</div>
+					</div>	
+					 -->
+						<div class="col-md-6">
+							<div class="form-group" ng-class="{ 'has-error' : frmChannel.fromDate.$invalid && (frmChannel.fromDate.$dirty || submitted) }">
+								<label class="control-label" ng-show="frmChannel.fromDate.$invalid &&  (frmChannel.fromDate.$dirty || submitted)" class="help-block">From Date is required</label>
+								<input class="form-control" name="fromDate" ng-model="search.startDate" type="text" 
+								id="datePickerItem_1" uib-datepicker-popup="dd-MM-yyyy" 
+								is-open="opened[1]" date-parser="dd-MM-yyyy" datepicker-options="dateOptions" current-text="Today"
+								clear-text="Clear" close-text="Close" ng-readonly="false" placeholder="From Date" required />
+			                    <span class="input-group-btn input-group-sm">
+			                        <button type="button" class="btn btn-fab btn-fab-mini" ng-click="openDatePicker($event, 1)">
+			                            <i class="material-icons">date_range</i>
+			                        </button>
+			                    </span>
+							</div>
+						</div>
+							
+						<div class="col-md-6">
+							<div class="form-group" ng-class="{ 'has-error' : frmChannel.toDate.$invalid && (frmChannel.toDate.$dirty || submitted) }">
+								<label class="control-label" ng-show="frmChannel.toDate.$invalid &&  (frmChannel.toDate.$dirty || submitted)" class="help-block">To Date is required</label>
+								<input class="form-control" name="toDate" ng-model="search.endDate" type="text" 
+			                    id="datePickerItem_2" uib-datepicker-popup="dd-MM-yyyy" 
+			                    is-open="opened[2]" date-parser="dd-MM-yyyy" datepicker-options="dateOptions" current-text="Today"
+			                    clear-text="Clear" close-text="Close" ng-readonly="false" placeholder="To Date" required/>
+			                    <span class="input-group-btn input-group-sm">
+			                        <button type="button" class="btn btn-fab btn-fab-mini" ng-click="openDatePicker($event, 2)">
+			                            <i class="material-icons">date_range</i>
+			                        </button>
+			                    </span>
+							</div>
+						</div>	
+					
+						<div class="col-md-12">
+							<a style="color:white" class="btn waves-effect waves-light blue" data-ng-click="fetchList()">Search</a>
+							<a style="color:white" class="btn waves-effect waves-light blue" data-ng-click="init()">Reset</a>
+						</div>
+				</div>
+			</div>	
+		</div>	 
+	</div>
+</form>
